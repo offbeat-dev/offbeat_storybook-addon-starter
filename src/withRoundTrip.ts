@@ -7,6 +7,13 @@ import { STORY_CHANGED } from "@storybook/core-events";
 import { EVENTS } from "./constants";
 
 export const withRoundTrip = (storyFn: StoryFunction<Renderer>) => {
+  console.log(
+    " %c[SB Addon Starter] -- Running %cwithRoundTrip%c decorator",
+    "font-weight: normal; color: white",
+    "font-weight: bold; color: orange",
+    "font-weight: normal; color: white"
+  );
+
   const emit = useChannel({
     [EVENTS.REQUEST]: () => {
       emit(EVENTS.RESULT, {

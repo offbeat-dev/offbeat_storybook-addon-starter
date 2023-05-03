@@ -10,6 +10,13 @@ export const withGlobals = (
   StoryFn: StoryFunction<Renderer>,
   context: StoryContext<Renderer>
 ) => {
+  console.log(
+    " %c[SB Addon Starter] -- Running %cwithGlobals%c decorator",
+    "font-weight: normal; color: white",
+    "font-weight: bold; color: orange",
+    "font-weight: normal; color: white"
+  );
+
   const [globals] = useGlobals();
   const myAddon = globals[PARAM_KEY];
   // Is the addon being used in the docs panel
